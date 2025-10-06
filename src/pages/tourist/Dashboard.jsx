@@ -13,6 +13,8 @@ import {
 } from 'lucide-react';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
+import AIChatbot from '../../components/ai/AIChatbot';
+import VoiceAssistant from '../../components/ai/VoiceAssistant';
 
 const Dashboard = () => {
   const user = JSON.parse(localStorage.getItem('user') || '{}');
@@ -64,22 +66,84 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Quick Services */}
+        {/* Essential Services (Government/Public) */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Services</h2>
+          <div className="flex items-center mb-6">
+            <div className="bg-blue-100 p-2 rounded-lg mr-3">
+              <FileText className="w-6 h-6 text-blue-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">Essential Services</h2>
+              <p className="text-sm text-gray-600">Government & Public Services</p>
+            </div>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link to="/entry-declaration" className="card hover:shadow-xl transition-shadow text-center border-2 border-blue-100">
+              <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <FileText className="w-6 h-6 text-blue-600" />
+              </div>
+              <p className="font-semibold text-gray-900">Entry Declaration</p>
+              <span className="text-xs text-blue-600 mt-1 inline-block">Required</span>
+            </Link>
+
+            <Link to="/accommodation" className="card hover:shadow-xl transition-shadow text-center border-2 border-blue-100">
+              <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Hotel className="w-6 h-6 text-blue-600" />
+              </div>
+              <p className="font-semibold text-gray-900">Register Stay</p>
+              <span className="text-xs text-blue-600 mt-1 inline-block">Required</span>
+            </Link>
+
+            <Link to="/visa-apply" className="card hover:shadow-xl transition-shadow text-center border-2 border-blue-100">
+              <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <CreditCard className="w-6 h-6 text-blue-600" />
+              </div>
+              <p className="font-semibold text-gray-900">Visa Services</p>
+              <span className="text-xs text-blue-600 mt-1 inline-block">Government</span>
+            </Link>
+
+            <Link to="/vat-refund" className="card hover:shadow-xl transition-shadow text-center border-2 border-blue-100">
+              <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <DollarSign className="w-6 h-6 text-blue-600" />
+              </div>
+              <p className="font-semibold text-gray-900">VAT Refund</p>
+              <span className="text-xs text-blue-600 mt-1 inline-block">Tax Service</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Value-Added Services (Commercial) */}
+        <div className="mb-8">
+          <div className="flex items-center mb-6">
+            <div className="bg-purple-100 p-2 rounded-lg mr-3">
+              <Ticket className="w-6 h-6 text-purple-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">Tourism & Travel</h2>
+              <p className="text-sm text-gray-600">Explore Vietnam</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link to="/tickets" className="card hover:shadow-xl transition-shadow text-center bg-gradient-to-br from-purple-50 to-pink-50">
+              <div className="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Ticket className="w-6 h-6 text-purple-600" />
+              </div>
+              <p className="font-semibold text-gray-900">Attraction Tickets</p>
+              <span className="text-xs text-purple-600 mt-1 inline-block">🎫 Popular</span>
+            </Link>
+
+            <Link to="/tours" className="card hover:shadow-xl transition-shadow text-center">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Map className="w-6 h-6 text-primary" />
+              </div>
+              <p className="font-semibold text-gray-900">Tours & Activities</p>
+            </Link>
+
             <Link to="/hotels" className="card hover:shadow-xl transition-shadow text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Hotel className="w-6 h-6 text-primary" />
               </div>
               <p className="font-semibold text-gray-900">Hotels</p>
-            </Link>
-
-            <Link to="/tours" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Ticket className="w-6 h-6 text-primary" />
-              </div>
-              <p className="font-semibold text-gray-900">Tours</p>
             </Link>
 
             <Link to="/transport" className="card hover:shadow-xl transition-shadow text-center">
@@ -96,32 +160,11 @@ const Dashboard = () => {
               <p className="font-semibold text-gray-900">Restaurants</p>
             </Link>
 
-            <Link to="/vat-refund" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <DollarSign className="w-6 h-6 text-primary" />
-              </div>
-              <p className="font-semibold text-gray-900">VAT Refund</p>
-            </Link>
-
-            <Link to="/entry-declaration" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <FileText className="w-6 h-6 text-primary" />
-              </div>
-              <p className="font-semibold text-gray-900">Entry Form</p>
-            </Link>
-
-            <Link to="/accommodation" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Hotel className="w-6 h-6 text-primary" />
-              </div>
-              <p className="font-semibold text-gray-900">Register Stay</p>
-            </Link>
-
             <Link to="/map" className="card hover:shadow-xl transition-shadow text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Map className="w-6 h-6 text-primary" />
               </div>
-              <p className="font-semibold text-gray-900">Explore</p>
+              <p className="font-semibold text-gray-900">Explore Map</p>
             </Link>
           </div>
         </div>
@@ -132,7 +175,7 @@ const Dashboard = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="card overflow-hidden p-0">
               <img
-                src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=400"
+                src="https://images.unsplash.com/photo-1528127269322-539801943592?w=400"
                 alt="Halong Bay"
                 className="w-full h-48 object-cover"
               />
@@ -148,7 +191,7 @@ const Dashboard = () => {
 
             <div className="card overflow-hidden p-0">
               <img
-                src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=400"
+                src="https://vietnam.travel/sites/default/files/inline-images/11125-Qu%E1%BA%A3ng%20Nam-huybank%40gmail.com-hoi%20an%20ve%20dem%20.jpg?w=400"
                 alt="Hoi An"
                 className="w-full h-48 object-cover"
               />
@@ -164,7 +207,7 @@ const Dashboard = () => {
 
             <div className="card overflow-hidden p-0">
               <img
-                src="https://images.unsplash.com/photo-1528127269322-539801943592?w=400"
+                src="https://res.cloudinary.com/ddjuftfy2/image/upload/f_webp,c_fill,q_auto/memphis/xlarge/1704292755_iStock-2153199185.jpg?w=400"
                 alt="Temple"
                 className="w-full h-48 object-cover"
               />
@@ -182,6 +225,10 @@ const Dashboard = () => {
       </div>
 
       <Footer />
+
+      {/* AI Features */}
+      <AIChatbot />
+      <VoiceAssistant />
     </div>
   );
 };

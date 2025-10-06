@@ -26,6 +26,8 @@ import BookingForm from './pages/tourism/BookingForm';
 import BookingConfirmation from './pages/tourism/BookingConfirmation';
 import MyBookings from './pages/tourism/MyBookings';
 import TourReview from './pages/tourism/TourReview';
+import AttractionTickets from './pages/tourism/AttractionTickets';
+import AttractionTicketDetail from './pages/tourism/AttractionTicketDetail';
 
 // New TypeScript Pages - VAT Refund
 import VatRefundScan from './pages/vat/VatRefundScan';
@@ -88,6 +90,8 @@ function App() {
         <Route path="/declaration/history" element={<DeclarationHistory />} />
 
         {/* Tourism Routes (TypeScript) */}
+        <Route path="/tickets" element={<AttractionTickets />} />
+        <Route path="/tickets/:id" element={<AttractionTicketDetail />} />
         <Route path="/tours-new" element={<TourSearch />} />
         <Route path="/tours-new/:id" element={<TourDetail />} />
         <Route path="/tours-new/book" element={<BookingForm />} />

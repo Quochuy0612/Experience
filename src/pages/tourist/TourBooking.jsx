@@ -21,7 +21,7 @@ const TourBooking = () => {
       price: 150,
       rating: 4.9,
       reviews: 1234,
-      image: 'https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=400',
+      image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=400',
       includes: ['Meals included', 'Hotel pickup', 'English guide', 'Kayaking', 'Sunset party'],
       highlights: ['UNESCO World Heritage Site', 'Overnight on boat', 'Cave exploration']
     },
@@ -32,7 +32,7 @@ const TourBooking = () => {
       price: 35,
       rating: 4.8,
       reviews: 892,
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsw4ICGhXFQF-R9rfMEZm0xh-Y5xkwhdbLJA&s?w=400',
       includes: ['10+ food stops', 'Local guide', 'Water & wet tissues'],
       highlights: ['Hidden local spots', 'Try authentic Pho', 'Market visit']
     },
@@ -43,7 +43,7 @@ const TourBooking = () => {
       price: 25,
       rating: 4.7,
       reviews: 654,
-      image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=400',
+      image: 'https://vietnam.travel/sites/default/files/inline-images/11125-Qu%E1%BA%A3ng%20Nam-huybank%40gmail.com-hoi%20an%20ve%20dem%20.jpg?w=400',
       includes: ['Professional guide', 'Entrance fees', 'Traditional tea'],
       highlights: ['Japanese Bridge', 'Lantern making', 'UNESCO site']
     }
