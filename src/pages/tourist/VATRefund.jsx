@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import { Upload, Scan, DollarSign, CheckCircle, Plus } from 'lucide-react';
+import { Upload, Scan, DollarSign, CheckCircle, Plus, MapPin, Map } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
+import { ROUTES } from '../../constants';
 
 const VATRefund = () => {
+  const navigate = useNavigate();
   const [invoices, setInvoices] = useState([
     { id: 1, shop: 'Hanoi Silk Shop', amount: 200, vat: 20, date: '2025-11-02' },
     { id: 2, shop: 'Handicraft Store', amount: 150, vat: 15, date: '2025-11-04' },
@@ -55,7 +58,10 @@ const VATRefund = () => {
                   <p className="text-green-100 text-sm">Refund Amount (10%)</p>
                   <p className="text-2xl font-bold">${totalVAT}</p>
                 </div>
-                <button className="bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+                <button
+                  onClick={() => navigate(ROUTES.VAT_CLAIM_LOCATIONS)}
+                  className="bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+                >
                   Claim at Airport
                 </button>
               </div>
@@ -134,6 +140,39 @@ const VATRefund = () => {
               </div>
             </div>
           )}
+
+          {/* Quick Access Cards - NEW */}
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            <div
+              onClick={() => navigate(ROUTES.VAT_DUTY_FREE_MAP)}
+              className="card bg-gradient-to-br from-blue-500 to-blue-600 text-white cursor-pointer hover:shadow-xl transition-all transform hover:scale-105"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                  <Map className="w-8 h-8" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg mb-1">Duty Free Stores</h3>
+                  <p className="text-sm opacity-90">Find tax-free shopping locations</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              onClick={() => navigate(ROUTES.VAT_CLAIM_LOCATIONS)}
+              className="card bg-gradient-to-br from-purple-500 to-purple-600 text-white cursor-pointer hover:shadow-xl transition-all transform hover:scale-105"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-8 h-8" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg mb-1">Airport Claim Points</h3>
+                  <p className="text-sm opacity-90">VAT refund counter locations</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Instructions */}
           <div className="bg-blue-50 rounded-xl p-6">

@@ -151,6 +151,24 @@ const VatRefundTracking: React.FC = () => {
                     </button>
                   )}
                 </div>
+
+                {/* New Quick Links Section */}
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  <button
+                    onClick={() => navigate(ROUTES.VAT_DUTY_FREE_MAP)}
+                    className="bg-blue-50 text-blue-600 py-2 px-3 rounded-lg hover:bg-blue-100 text-sm font-medium flex items-center justify-center"
+                  >
+                    <span className="mr-2">🛍️</span>
+                    Duty Free Stores
+                  </button>
+                  <button
+                    onClick={() => navigate(ROUTES.VAT_CLAIM_LOCATIONS)}
+                    className="bg-purple-50 text-purple-600 py-2 px-3 rounded-lg hover:bg-purple-100 text-sm font-medium flex items-center justify-center"
+                  >
+                    <span className="mr-2">📍</span>
+                    Claim Locations
+                  </button>
+                </div>
               </div>
             );
           })}

@@ -133,6 +133,8 @@ export const ROUTES = {
   VAT_REVIEW: '/vat-refund/review',
   VAT_PAYMENT: '/vat-refund/payment',
   VAT_TRACKING: '/vat-refund/tracking',
+  VAT_DUTY_FREE_MAP: '/vat-refund/duty-free-map',
+  VAT_CLAIM_LOCATIONS: '/vat-refund/claim-locations',
 
   // Accommodation & Visa
   RESIDENCE_REGISTRATION: '/residence/register',

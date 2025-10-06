@@ -396,6 +396,41 @@ export interface VatRefundTimeline {
   completed: boolean;
 }
 
+export interface DutyFreeStore {
+  id: string;
+  name: string;
+  city: string;
+  address: string;
+  phone: string;
+  hours: string;
+  categories: string[];
+  distance?: number;
+  rating: number;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+}
+
+export interface VatClaimLocation {
+  id: string;
+  airport: string;
+  airportCode: string;
+  city: string;
+  terminal: string;
+  location: string;
+  floor: string;
+  area: string;
+  hours: string;
+  description: string;
+  procedures: string[];
+  requiredDocuments: string[];
+  processingTime: string;
+  contactPhone: string;
+  tips: string[];
+  mapUrl?: string;
+}
+
 // ============================================================================
 // ACCOMMODATION & VISA TYPES
 // ============================================================================
