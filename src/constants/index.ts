@@ -135,6 +135,8 @@ export const ROUTES = {
   VAT_TRACKING: '/vat-refund/tracking',
   VAT_DUTY_FREE_MAP: '/vat-refund/duty-free-map',
   VAT_CLAIM_LOCATIONS: '/vat-refund/claim-locations',
+  VAT_SUBMIT_REQUEST: '/vat-refund/submit',
+  VAT_TRACK_STATUS: '/vat-refund/track',
 
   // Accommodation & Visa
   RESIDENCE_REGISTRATION: '/residence/register',

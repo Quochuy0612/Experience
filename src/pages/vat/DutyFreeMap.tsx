@@ -129,7 +129,7 @@ const DutyFreeMap: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm sticky top-0 z-10">
+      <header className="bg-white shadow-sm sticky top-0 z-20">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <button onClick={() => navigate(ROUTES.VAT_TRACKING)} className="text-blue-600">← Back</button>
           <h1 className="text-xl font-bold">Duty Free Stores</h1>
@@ -138,7 +138,7 @@ const DutyFreeMap: React.FC = () => {
       </header>
 
       {/* Search & Filters */}
-      <div className="bg-white border-b sticky top-16 z-10">
+      <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-4 space-y-3">
           {/* Search Bar */}
           <div className="relative">
@@ -153,7 +153,7 @@ const DutyFreeMap: React.FC = () => {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex gap-2 overflow-x-auto pb-2">
+          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             <select
               value={selectedCity}
               onChange={(e) => setSelectedCity(e.target.value)}
@@ -316,12 +316,20 @@ const DutyFreeMap: React.FC = () => {
               <p className="text-sm mb-3 opacity-90">
                 Get up to 10% VAT refund on eligible purchases. Make sure to claim at the airport before departure.
               </p>
-              <button
-                onClick={() => navigate(ROUTES.VAT_TRACKING)}
-                className="bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-green-50 text-sm font-medium"
-              >
-                Track My VAT Refunds →
-              </button>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => navigate(ROUTES.VAT_SUBMIT_REQUEST)}
+                  className="bg-white text-green-600 px-4 py-2 rounded-lg hover:bg-green-50 text-sm font-medium"
+                >
+                  Submit Request →
+                </button>
+                <button
+                  onClick={() => navigate(ROUTES.VAT_TRACK_STATUS)}
+                  className="border border-white text-white px-4 py-2 rounded-lg hover:bg-white/10 text-sm font-medium"
+                >
+                  Track Status →
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -34,6 +34,8 @@ import VatRefundPayment from './pages/vat/VatRefundPayment';
 import VatRefundTracking from './pages/vat/VatRefundTracking';
 import DutyFreeMap from './pages/vat/DutyFreeMap';
 import VatClaimLocations from './pages/vat/VatClaimLocations';
+import VatSubmitRequest from './pages/vat/VatSubmitRequest';
+import VatTrackStatus from './pages/vat/VatTrackStatus';
 
 // New TypeScript Pages - Visa & Residence
 import ResidenceRegistration from './pages/visa/ResidenceRegistration';
@@ -100,6 +102,8 @@ function App() {
         <Route path="/vat/tracking" element={<VatRefundTracking />} />
         <Route path="/vat-refund/duty-free-map" element={<DutyFreeMap />} />
         <Route path="/vat-refund/claim-locations" element={<VatClaimLocations />} />
+        <Route path="/vat-refund/submit" element={<VatSubmitRequest />} />
+        <Route path="/vat-refund/track" element={<VatTrackStatus />} />
 
         {/* Visa & Residence Routes (TypeScript) */}
         <Route path="/residence/register" element={<ResidenceRegistration />} />
