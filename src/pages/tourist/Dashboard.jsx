@@ -9,7 +9,16 @@ import {
   DollarSign,
   Map,
   FileText,
-  CheckCircle
+  CheckCircle,
+  Plane,
+  Building2,
+  ShieldCheck,
+  Receipt,
+  MapPin,
+  Compass,
+  Utensils,
+  Bus,
+  Landmark
 } from 'lucide-react';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
@@ -70,7 +79,7 @@ const Dashboard = () => {
         <div className="mb-8">
           <div className="flex items-center mb-6">
             <div className="bg-blue-100 p-2 rounded-lg mr-3">
-              <FileText className="w-6 h-6 text-blue-600" />
+              <Landmark className="w-6 h-6 text-blue-600" />
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Essential Services</h2>
@@ -80,7 +89,7 @@ const Dashboard = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <Link to="/entry-declaration" className="card hover:shadow-xl transition-shadow text-center border-2 border-blue-100">
               <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <FileText className="w-6 h-6 text-blue-600" />
+                <Plane className="w-6 h-6 text-blue-600" />
               </div>
               <p className="font-semibold text-gray-900">Entry Declaration</p>
               <span className="text-xs text-blue-600 mt-1 inline-block">Required</span>
@@ -88,7 +97,7 @@ const Dashboard = () => {
 
             <Link to="/accommodation" className="card hover:shadow-xl transition-shadow text-center border-2 border-blue-100">
               <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Hotel className="w-6 h-6 text-blue-600" />
+                <Building2 className="w-6 h-6 text-blue-600" />
               </div>
               <p className="font-semibold text-gray-900">Register Stay</p>
               <span className="text-xs text-blue-600 mt-1 inline-block">Required</span>
@@ -96,7 +105,7 @@ const Dashboard = () => {
 
             <Link to="/visa-apply" className="card hover:shadow-xl transition-shadow text-center border-2 border-blue-100">
               <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <CreditCard className="w-6 h-6 text-blue-600" />
+                <ShieldCheck className="w-6 h-6 text-blue-600" />
               </div>
               <p className="font-semibold text-gray-900">Visa Services</p>
               <span className="text-xs text-blue-600 mt-1 inline-block">Government</span>
@@ -104,7 +113,7 @@ const Dashboard = () => {
 
             <Link to="/vat-refund" className="card hover:shadow-xl transition-shadow text-center border-2 border-blue-100">
               <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <DollarSign className="w-6 h-6 text-blue-600" />
+                <Receipt className="w-6 h-6 text-blue-600" />
               </div>
               <p className="font-semibold text-gray-900">VAT Refund</p>
               <span className="text-xs text-blue-600 mt-1 inline-block">Tax Service</span>
@@ -116,7 +125,7 @@ const Dashboard = () => {
         <div className="mb-8">
           <div className="flex items-center mb-6">
             <div className="bg-purple-100 p-2 rounded-lg mr-3">
-              <Ticket className="w-6 h-6 text-purple-600" />
+              <Compass className="w-6 h-6 text-purple-600" />
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Tourism & Travel</h2>
@@ -124,45 +133,45 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link to="/tickets" className="card hover:shadow-xl transition-shadow text-center bg-gradient-to-br from-purple-50 to-pink-50">
-              <div className="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center mx-auto mb-3">
+            <Link to="/tickets" className="card hover:shadow-xl transition-shadow text-center bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-100">
+              <div className="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Ticket className="w-6 h-6 text-purple-600" />
               </div>
               <p className="font-semibold text-gray-900">Attraction Tickets</p>
-              <span className="text-xs text-purple-600 mt-1 inline-block">🎫 Popular</span>
+              <span className="text-xs text-purple-600 mt-1 inline-block font-semibold">⭐ Popular</span>
             </Link>
 
             <Link to="/tours" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Map className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-orange-600" />
               </div>
               <p className="font-semibold text-gray-900">Tours & Activities</p>
             </Link>
 
             <Link to="/hotels" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Hotel className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 bg-pink-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Hotel className="w-6 h-6 text-pink-600" />
               </div>
               <p className="font-semibold text-gray-900">Hotels</p>
             </Link>
 
             <Link to="/transport" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Car className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Bus className="w-6 h-6 text-green-600" />
               </div>
               <p className="font-semibold text-gray-900">Transport</p>
             </Link>
 
             <Link to="/restaurants" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <UtensilsCrossed className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Utensils className="w-6 h-6 text-red-600" />
               </div>
               <p className="font-semibold text-gray-900">Restaurants</p>
             </Link>
 
             <Link to="/map" className="card hover:shadow-xl transition-shadow text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Map className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 bg-teal-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Compass className="w-6 h-6 text-teal-600" />
               </div>
               <p className="font-semibold text-gray-900">Explore Map</p>
             </Link>
